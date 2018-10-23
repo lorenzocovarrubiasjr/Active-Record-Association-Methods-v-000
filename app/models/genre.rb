@@ -13,5 +13,6 @@ class Genre < ActiveRecord::Base
   def all_artist_names
     artist_names = []
     self.artists.select {|artist| artist_names << artist.name}
+    artist_names
   end
 end
